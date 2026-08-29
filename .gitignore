@@ -16,6 +16,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+.streamlit/secrets.toml
 
 # Runtime state của HITL (sinh khi chạy) — không commit
 data/state/*.json

@@ -18,6 +18,9 @@ httpx>=0.27              # TestClient của FastAPI dùng httpx
 # --- Reviewer CLI (reviewer_cli.py) -------------------------------------
 rich>=13.7
 
+# --- Web UI (streamlit_app.py) — dùng để deploy lên Streamlit Cloud -----
+streamlit>=1.37
+
 # --- LLM THẬT (tuỳ chọn) --------------------------------------------------
 #  Không cài vẫn chạy được: mặc định LLM_PROVIDER=fake (deterministic).
 #  Đặt LLM_PROVIDER=openrouter trong .env để dùng google/gemini-2.5-flash.

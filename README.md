@@ -139,7 +139,17 @@ python reviewer_cli.py sweep-sla
 python reviewer_cli.py metrics
 ```
 
-### 2. Mô phỏng + báo cáo số liệu
+### 2. Web UI (Streamlit)
+
+```bash
+streamlit run streamlit_app.py
+```
+
+3 tab: **Chat** (người dùng hỏi) · **Hàng đợi duyệt** (claim → approve/edit/reject) ·
+**Số liệu** (metrics realtime). Nút *Seed dữ liệu demo* ở sidebar chạy toàn bộ
+`data/scenarios.jsonl` để có sẵn task + số liệu.
+
+### 3. Mô phỏng + báo cáo số liệu
 
 ```bash
 python scripts/run_simulation.py --seed 42     # 25 hội thoại + người duyệt giả lập
@@ -179,6 +189,19 @@ LLM luôn là `FakeLLM`, đồng hồ được reset sau mỗi test.
 Kết quả mẫu (seed 42): automation rate **52%**, escalation **48%**, trong đó approve
 ~58% / edit 25% / reject 0%, SLA breach 2 ca; định tuyến khớp nhãn tay **23/25 (92%)**
 với 2 "known gap" được ghi rõ trong report (retrieval khớp nhầm / KB thiếu tình huống).
+
+## Deploy lên Streamlit Community Cloud
+
+1. Push repo lên GitHub (đã public).
+2. Vào https://share.streamlit.io → **New app** → chọn repo, branch `main`,
+   main file `streamlit_app.py`.
+3. **Advanced settings**: Python 3.11+ (khuyến nghị 3.12).
+4. **Settings → Secrets**: dán nội dung `.streamlit/secrets.toml.example` và điền
+   `OPENROUTER_API_KEY` (không có key thì app tự chạy `FakeLLM`).
+5. Deploy. Mỗi lần push `main`, Streamlit tự build lại.
+
+Lưu ý: state (`data/state/*.json`) nằm trên container Streamlit — reset khi app
+redeploy/ngủ. Đây là demo, không phải store bền vững.
 
 ## Giới hạn đã biết (production sẽ khác)
 

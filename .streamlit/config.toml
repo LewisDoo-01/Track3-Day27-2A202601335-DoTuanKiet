@@ -1,0 +1,7 @@
+[theme]
+primaryColor = "#4f46e5"
+base = "light"
+
+[server]
+# Streamlit Cloud bỏ qua phần lớn mục này; giữ cho chạy local.
+headless = true
