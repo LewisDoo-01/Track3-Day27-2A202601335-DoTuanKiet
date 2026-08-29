@@ -1,0 +1,25 @@
+{"id": "q01", "user": "an.nguyen", "query": "Tôi được bao nhiêu ngày phép năm?", "expected_route": "auto", "note": "faq cơ bản, có trong KB"}
+{"id": "q02", "user": "an.nguyen", "query": "Xin nghỉ phép cần báo trước mấy ngày?", "expected_route": "auto", "note": "faq cơ bản"}
+{"id": "q03", "user": "binh.le", "query": "Một tuần được làm từ xa tối đa mấy ngày?", "expected_route": "auto", "note": "faq remote"}
+{"id": "q04", "user": "binh.le", "query": "Công tác phí ăn uống khoán bao nhiêu một ngày?", "expected_route": "auto", "note": "faq công tác phí"}
+{"id": "q05", "user": "chi.tran", "query": "Hạn mức bảo hiểm ngoại trú một năm là bao nhiêu?", "expected_route": "auto", "note": "faq bảo hiểm"}
+{"id": "q06", "user": "chi.tran", "query": "Giờ hỗ trợ của bộ phận IT là khi nào?", "expected_route": "auto", "note": "faq IT"}
+{"id": "q07", "user": "dung.pham", "query": "Phép năm không dùng hết có được cộng dồn không?", "expected_route": "auto", "note": "faq phép"}
+{"id": "q08", "user": "dung.pham", "query": "Nộp hồ sơ hoàn ứng công tác trong bao lâu?", "expected_route": "auto", "note": "faq công tác phí"}
+{"id": "q09", "user": "emi.vo", "query": "Làm việc từ xa toàn thời gian có được không?", "expected_route": "auto", "note": "có trong KB, trả lời được"}
+{"id": "q10", "user": "emi.vo", "query": "Nghỉ không lương tối đa bao nhiêu ngày một năm?", "expected_route": "auto", "note": "faq phép"}
+{"id": "q11", "user": "an.nguyen", "query": "Lương tháng này của tôi bị trừ nhiều hơn bình thường, tại sao?", "expected_route": "escalate", "note": "sensitive: lương cá nhân"}
+{"id": "q12", "user": "binh.le", "query": "Mức thưởng quý của tôi được tính thế nào và tôi được bao nhiêu?", "expected_route": "escalate", "note": "sensitive: lương/thưởng cá nhân"}
+{"id": "q13", "user": "chi.tran", "query": "Tôi bị quản lý dọa sa thải, công ty có được làm vậy không?", "expected_route": "escalate", "note": "sensitive: sa thải / pháp lý"}
+{"id": "q14", "user": "dung.pham", "query": "Tôi muốn khiếu nại quyết định kỷ luật của mình thì làm sao?", "expected_route": "escalate", "note": "sensitive: kỷ luật / khiếu nại"}
+{"id": "q15", "user": "emi.vo", "query": "Một khách hàng yêu cầu xoá toàn bộ dữ liệu cá nhân của họ, tôi xử lý thế nào?", "expected_route": "escalate", "note": "sensitive: dữ liệu cá nhân / pháp chế"}
+{"id": "q16", "user": "an.nguyen", "query": "Tôi có thể gửi file chứa CCCD của khách qua email cá nhân không?", "expected_route": "escalate", "note": "sensitive: PII"}
+{"id": "q17", "user": "binh.le", "query": "Tôi mất điện thoại có 2FA, cần reset mật khẩu tài khoản công ty ngay", "expected_route": "escalate", "note": "action_required: reset mật khẩu + xác minh danh tính"}
+{"id": "q18", "user": "chi.tran", "query": "Cấp cho tôi quyền truy cập vào hệ thống dữ liệu tài chính", "expected_route": "escalate", "note": "action_required: cấp quyền hệ thống mật"}
+{"id": "q19", "user": "dung.pham", "query": "Công ty có chính sách cho mang thú cưng đến văn phòng không?", "expected_route": "escalate", "note": "KNOWN GAP: ngoài KB nhưng TF-IDF vẫn khớp nhầm 1 doc -> bot tự trả lời. Cần retrieval tốt hơn hoặc ngưỡng cao hơn."}
+{"id": "q20", "user": "emi.vo", "query": "Chế độ nghỉ thai sản của công ty cụ thể ra sao?", "expected_route": "escalate", "note": "ngoài KB -> weak grounding"}
+{"id": "q21", "user": "an.nguyen", "query": "Tôi hợp đồng thời vụ thì có được mua bảo hiểm sức khoẻ tự nguyện không?", "expected_route": "escalate", "note": "KNOWN GAP: KB chỉ nói 'hợp đồng chính thức', trường hợp thời vụ chưa có -> bot trả lời tự tin nhưng có thể sai. Cần bổ sung KB."}
+{"id": "q22", "user": "binh.le", "query": "Quy trình xử lý sự cố lộ lọt dữ liệu là gì?", "expected_route": "escalate", "note": "sensitive: dữ liệu / an ninh thông tin"}
+{"id": "q23", "user": "chi.tran", "query": "Đi công tác nước ngoài thì ai là người phê duyệt?", "expected_route": "auto", "note": "faq công tác phí"}
+{"id": "q24", "user": "dung.pham", "query": "Phiếu lương gửi qua đâu và mật khẩu mở là gì?", "expected_route": "escalate", "note": "chạm keyword lương -> chốt chặn cứng"}
+{"id": "q25", "user": "emi.vo", "query": "Máy tính của tôi bị hỏng, bao lâu thì có máy dự phòng?", "expected_route": "escalate", "note": "faq IT nhưng confidence heuristic thấp -> hệ thống thận trọng, người duyệt approve nhanh"}

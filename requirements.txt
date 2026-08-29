@@ -1,0 +1,27 @@
+# ============================================================================
+#  HITL Chatbot — dependencies
+#  Chia theo nhóm. Phần LÕI đủ để chạy pipeline + toàn bộ test (offline).
+# ============================================================================
+
+# --- LÕI: test + nạp .env ---------------------------------------------------
+pytest>=8.0
+python-dotenv>=1.0        # tiện dụng; config.py cũng tự nạp .env nếu thiếu gói này
+
+# --- API server (app.py) --------------------------------------------------
+#  Ghim cặp fastapi/starlette tương thích (một số env anaconda có sẵn
+#  starlette 1.x làm vỡ fastapi 0.11x). Cài trong venv sạch để tránh xung đột.
+fastapi>=0.115,<0.116
+starlette>=0.37,<0.42
+uvicorn[standard]>=0.29
+httpx>=0.27              # TestClient của FastAPI dùng httpx
+
+# --- Reviewer CLI (reviewer_cli.py) -------------------------------------
+rich>=13.7
+
+# --- LLM THẬT (tuỳ chọn) --------------------------------------------------
+#  Không cài vẫn chạy được: mặc định LLM_PROVIDER=fake (deterministic).
+#  Đặt LLM_PROVIDER=openrouter trong .env để dùng google/gemini-2.5-flash.
+openai>=1.30            # client OpenAI-compatible, trỏ base_url sang OpenRouter
+
+# Retrieval (TF-IDF), Levenshtein, percentile... viết thuần Python — không cần
+# numpy / scikit-learn.

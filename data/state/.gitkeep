@@ -1,0 +1,2 @@
+# Thư mục chứa state runtime (review_queue.json, audit_log.json, feedback.json).
+# Nội dung .json bị .gitignore; giữ file này để thư mục tồn tại sau khi clone.

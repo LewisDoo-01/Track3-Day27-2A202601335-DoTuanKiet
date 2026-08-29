@@ -1,0 +1,6 @@
+# Ép các file text luôn được xử lý là text (UTF-8, LF) — tránh commit nhầm binary/UTF-16.
+*.md    text eol=lf
+*.py    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf

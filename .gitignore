@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime state của HITL (sinh khi chạy) — không commit
+data/state/*.json
+
+# reports/ ĐƯỢC commit (là deliverable): metrics.json, metrics.csv,
+# final_report.md, feedback_dataset.jsonl sinh bởi scripts/generate_report.py
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

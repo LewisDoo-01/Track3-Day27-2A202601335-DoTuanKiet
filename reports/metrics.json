@@ -1,0 +1,18 @@
+{
+  "total_conversations": 25,
+  "auto_answered": 13,
+  "escalated": 12,
+  "automation_rate_pct": 52.0,
+  "escalation_rate_pct": 48.0,
+  "review_resolved": 10,
+  "approve_rate_pct": 58.33,
+  "edit_rate_pct": 25.0,
+  "reject_rate_pct": 0.0,
+  "sla_timeout_count": 2,
+  "sla_breach_rate_pct": 16.67,
+  "review_latency_sec_p50": 1751.31,
+  "review_latency_sec_p95": 3410.76,
+  "review_latency_sec_mean": 1918.94,
+  "avg_edit_distance": 0.0763,
+  "est_human_minutes_saved": 52.0
+}
